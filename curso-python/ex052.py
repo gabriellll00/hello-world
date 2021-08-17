@@ -1,11 +1,16 @@
 while True:
-    num = input()
-    if num == 'fim':
+    numero = input('Digite um número: ')
+    contador = 0
+    if numero == 'fim':
         break
-    num = int(num)
-    if num == 2:
-        print('É um número primo')
-    elif num % num == 0 and num % 1 == 0 and num % 2 != 0:
-        print('É um número primo.')
+    numero = int(numero)
+    for num in range(1, numero+1):
+        if numero % num == 0:
+            contador += 1
+    if contador == 2:
+        print(f'{numero} é um número primo.')
+        print(f'{contador} divisão/divisões.')
     else:
-        print('Não é um número primo.')
+        print(f'{numero} não é um número primo.')
+        print(f'{contador} divisão/divisões.')
+
